@@ -1,0 +1,2 @@
+# kaczla-config
+Personal configuration
