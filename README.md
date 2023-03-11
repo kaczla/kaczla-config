@@ -18,3 +18,4 @@ git config --global commit.gpgsign true
 
 - `git` - `.gitignore`
 - `nano` - `.nanorc`
+- screen - `.screenrc`
