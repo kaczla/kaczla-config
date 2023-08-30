@@ -18,4 +18,14 @@ git config --global commit.gpgsign true
 
 - `git` - `.gitignore`
 - `nano` - `.nanorc`
-- screen - `.screenrc`
+- `screen` - `.screenrc`
+
+# Troubleshooting
+
+## Removing MIME types for kitty
+
+Due to opening directories/paths/devices in terminal instead of in GUI file manager.
+
+```shell
+sudo rm /usr/share/applications/{kitty.desktop,kitty-open.desktop}
+```
