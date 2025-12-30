@@ -16,9 +16,10 @@ git config --global commit.gpgsign true
 
 # Configuration files
 
-- `git` - `.gitignore`
-- `nano` - `.nanorc`
-- `screen` - `.screenrc`
+- `git` - `.gitignore` file
+- `nano` - `.nanorc` file
+- `screen` - `.screenrc` file
+- `kitty` terminal - `.config/kitty` directory
 
 # Command lines
 
