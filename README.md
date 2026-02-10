@@ -43,6 +43,11 @@ ssh-keygen -t ed25519 -C 'email_or_comments' -f id_ed25519_name
 
 # Troubleshooting
 
+## Keep SSH run programs after logout
+
+To keep the run program on the machine, modify `/etc/systemd/logind.conf` configuration file
+with option `KillUserProcesses=no` enabled.
+
 ## Removing MIME types for kitty
 
 Due to opening directories/paths/devices in terminal instead of in GUI file manager.
@@ -67,4 +72,6 @@ sudo nmap -sn 192.168.1.1/24
 
 ## Add docker group to the user
 
+```
 sudo usermod -aG docker $USER
+```
