@@ -43,6 +43,13 @@ while IFS= read -r lock_file; do
 
     cd "$dir"
 
+    # Skip if there are uncommitted changes (ignores untracked files)
+    if ! git diff --quiet HEAD; then
+        echo "  [SKIP] Uncommitted changes detected"
+        cd - > /dev/null
+        continue
+    fi
+
     # Sync with remote before updating
     if ! git pull -p -r; then
         echo "  [WARN] git pull failed in $dir, skipping"

@@ -25,8 +25,8 @@ while IFS= read -r git_dir; do
 
     cd "$dir"
 
-    # Skip if there are uncommitted changes
-    if [[ -n "$(git status --porcelain)" ]]; then
+    # Skip if there are uncommitted changes (ignores untracked files)
+    if ! git diff --quiet HEAD; then
         echo "  [SKIP] Uncommitted changes detected"
         cd - > /dev/null
         continue
