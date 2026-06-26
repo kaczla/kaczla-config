@@ -104,3 +104,9 @@ whosthere
 ```
 sudo usermod -aG docker $USER
 ```
+
+## Update Arch Linux keyring
+
+```shell
+sudo pacman -Sy archlinux-keyring
+```
